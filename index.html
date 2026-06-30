@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Year 8 Latin · 8JWW · DIRT Lesson 2 · The Case Detective</title>
+<style>
+  :root{--navy:#1F3864;--blue:#2E75B6;--verb:#C00000;--subj:#0070C0;--obj:#00A14B;
+    --gold:#C9A227;--notebg:#FFFDF3;--line:#d9d9d9;--grey:#f4f6f9;--green:#548235;--amber:#BF8F00;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1a1a1a;background:#eef2f7;line-height:1.5}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  .hbar{max-width:920px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .hbar h1{font-size:18px;margin:0;font-weight:700;flex:1;min-width:200px}
+  .hbar h1 small{display:block;font-weight:400;font-size:12px;opacity:.85;letter-spacing:.5px}
+  .scorepill{background:#fff;color:var(--navy);border-radius:999px;padding:6px 14px;font-weight:800;font-size:15px;white-space:nowrap}
+  .save{font-size:12px;opacity:.9}
+  .namebar{background:#16294a;color:#fff}
+  .namebar .inner{max-width:920px;margin:0 auto;padding:8px 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .namebar input{border:none;border-radius:6px;padding:6px 10px;font-size:14px;min-width:160px}
+  h2.part{color:var(--navy);border-bottom:3px solid var(--blue);padding-bottom:6px;margin:34px 0 10px;font-size:24px}
+  h3{color:var(--blue);margin:20px 0 8px;font-size:18px}
+  p{margin:8px 0}
+  .v{color:var(--verb);font-weight:700}.s{color:var(--subj);font-weight:700}.o{color:var(--obj);font-weight:700}
+  .muted{color:#667;font-size:13px}
+  .gloss{color:#7a8190;font-style:italic;font-size:13px;margin-left:4px}
+  .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .keybar{display:flex;gap:18px;flex-wrap:wrap;font-weight:700;font-size:14px;background:var(--grey);border-radius:10px;padding:10px 14px;margin:10px 0}
+  /* badges */
+  .badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.4px;border-radius:6px;padding:2px 9px;vertical-align:middle;margin-left:8px}
+  .b-core{background:#d8e6f6;color:#1f3864}.b-plus{background:#e7e2f3;color:#5b3f97}
+  .b-supp{background:#fde9cf;color:#8a5a00}.b-chal{background:#dff0e0;color:#2c6b35}.b-tom{background:#fbe1e1;color:#8a1f1f}
+  /* paths */
+  .paths{display:flex;gap:12px;flex-wrap:wrap}
+  .paths a{flex:1;min-width:210px;text-decoration:none;color:inherit;border:2px solid #d6deea;border-radius:12px;padding:12px 14px;display:block;background:#fbfcfe}
+  .paths a:hover{border-color:var(--blue)}
+  .paths b{display:block;color:var(--navy);margin-bottom:3px}
+  /* notes */
+  .note{background:var(--notebg);border:1px solid var(--gold);border-left:7px solid var(--gold);border-radius:10px;padding:14px 18px;margin:14px 0;
+        font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;font-size:17px;line-height:1.7}
+  .note .tag{display:inline-block;background:var(--gold);color:#3a2e00;font-weight:700;border-radius:6px;padding:2px 10px;margin-bottom:8px;
+        font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:12px;letter-spacing:.5px}
+  .note .done{float:right;font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:12px;color:#3a2e00}
+  .note .nh{font-weight:700;margin:6px 0 10px;font-size:18px}
+  .note .cap{font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:12px;color:#8a6d1a;margin:2px 0 8px}
+  .note table.end,.note table.tenses{border-collapse:collapse;width:auto;margin:4px 0}
+  .note table.end td,.note table.tenses td{border:1px solid #e3cf86;padding:7px 16px;font-family:inherit;font-size:17px;background:#fffdf3;vertical-align:top;line-height:1.5}
+  .note table.end td.h,.note table.tenses td.h{font-weight:700;background:#f6ecca}
+  table{border-collapse:collapse;width:100%;margin:10px 0;font-size:15px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:middle}
+  th{background:var(--blue);color:#fff;font-weight:700}
+  tr:nth-child(even) td{background:#fafbfd}
+  /* DIRT box */
+  .dirtbox{background:#fff7f7;border:1px solid #e9b9b9;border-left:7px solid var(--verb);border-radius:10px;padding:14px 18px;margin:14px 0}
+  .dirtbox .dh{font-weight:800;color:var(--verb);font-size:16px;margin-bottom:6px}
+  .dirtbox textarea{min-height:84px}
+  .reqstar{color:var(--verb);font-weight:800}
+  /* questions */
+  .q{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed #e6e6e6;flex-wrap:wrap}
+  .q .num{font-weight:800;color:var(--navy);min-width:30px}
+  .q .stem{flex:1;min-width:170px}
+  .q input.ans,.q input.dirtin{border:1px solid #c5ccd6;border-radius:7px;padding:6px 9px;font-size:15px;min-width:150px}
+  .q select.ans{border:1px solid #c5ccd6;border-radius:7px;padding:6px 9px;font-size:15px}
+  .q .model{display:none;font-weight:700;color:var(--verb)}
+  .q.revealed .model{display:inline}
+  .q .why{display:none;font-size:13px;color:#5b6470;font-style:italic;margin-top:3px}
+  .q.revealed .why{display:block}
+  .q .dirt{margin-top:6px;font-size:14px}
+  .q .mark{display:none;gap:4px}
+  .q.revealed .mark{display:inline-flex}
+  .mark button{border:1px solid #c5ccd6;background:#fff;border-radius:6px;width:30px;height:30px;font-size:15px;cursor:pointer}
+  .mark button.tick.on{background:#e2efda;border-color:var(--green);color:var(--green)}
+  .mark button.cross.on{background:#fbe4e4;border-color:var(--verb);color:var(--verb)}
+  .verdict{font-weight:800;font-size:18px}.verdict.y{color:var(--green)}.verdict.n{color:var(--verb)}
+  .q.ok input.ans,.q.ok select.ans{border-color:var(--green);background:#f3faf0}
+  .q.no input.ans,.q.no select.ans{border-color:var(--verb);background:#fdf3f3}
+  .ans.need{border-color:var(--verb)!important;background:#fff6f6!important}
+  #dirt.need{border-color:var(--verb);background:#fff6f6;box-shadow:0 0 0 2px #f3c9c9}
+  .q .ans:disabled{opacity:1;-webkit-text-fill-color:#1a1a1a;color:#1a1a1a;cursor:default}
+  .q.ok input.ans:disabled,.q.ok select.ans:disabled{background:#f3faf0;border-color:var(--green)}
+  .q.no input.ans:disabled,.q.no select.ans:disabled{background:#fdf3f3;border-color:var(--verb)}
+  button.act.locked{opacity:.55;cursor:default;background:#7d8aa0}
+  .secbtns{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0;align-items:center}
+  button.act{background:var(--blue);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:14px;font-weight:700;cursor:pointer}
+  .sectotal{font-weight:800;color:var(--navy)}
+  .stopcheck{background:var(--grey);border-left:6px solid var(--gold);border-radius:8px;padding:10px 14px;margin:10px 0;font-size:14px}
+  .target{background:#eaf3ec;border:1px solid #b9d8bf;border-radius:8px;padding:8px 12px;font-size:14px;margin:8px 0}
+  details.vocab{margin:8px 0;border:1px dashed #c5ccd6;border-radius:8px;padding:6px 12px;background:#fafbfd}
+  details.vocab summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:14px}
+  details.vocab .vlist{font-size:14px;columns:2;margin-top:6px}
+  .rag{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+  .rag label{flex:1;min-width:200px;border:2px solid #ccc;border-radius:10px;padding:12px;cursor:pointer;text-align:center;font-weight:600}
+  .rag input{display:none}.rag .r{border-color:#e0a0a0}.rag .a{border-color:#e0c878}.rag .g{border-color:#a6c98e}
+  .rag label.sel.r{background:#fbe4e4;border-color:var(--verb)}.rag label.sel.a{background:#fff2cc;border-color:var(--amber)}.rag label.sel.g{background:#e2efda;border-color:var(--green)}
+  textarea{width:100%;border:1px solid #c5ccd6;border-radius:8px;padding:10px;font-size:15px;font-family:inherit;min-height:70px}
+  .toolbar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #dfe5ee;box-shadow:0 -2px 8px rgba(0,0,0,.08);z-index:60}
+  .toolbar .inner{max-width:920px;margin:0 auto;padding:10px 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .toolbar .grow{flex:1}
+  .toolbar button{border-radius:8px;padding:9px 14px;font-size:14px;font-weight:700;cursor:pointer;border:1.5px solid var(--navy);background:#fff;color:var(--navy)}
+  .toolbar button.primary{background:var(--navy);color:#fff}
+  /* readability + ready flag */
+  body.plain .note{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;font-size:15px;line-height:1.6}
+  body.big{font-size:18px}
+  body.big .note{font-size:19px}
+  body.big .q input.ans,body.big .q select.ans{font-size:17px}
+  .readybadge{display:inline-block;font-weight:800;font-size:13px;border-radius:999px;padding:4px 12px;margin-left:8px}
+  .readybadge.no{background:#fdecea;color:#a3341f}.readybadge.yes{background:#e2efda;color:#2c6b35}
+  @media print{header,.toolbar,.namebar,.secbtns,.save,.paths{display:none!important}
+    .q .model,.q .why{display:inline!important}.q .mark{display:none!important}body{background:#fff}.card{box-shadow:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hbar">
+    <h1>The Case Detective <small>YEAR 8 LATIN · 8JWW · DIRT INTERVENTION · LESSON 2</small></h1>
+    <div class="scorepill" id="scorepill">Core 0 / 0</div>
+    <div class="save" id="savestatus">saved ✓</div>
+  </div>
+  <div class="namebar"><div class="inner">
+    <span>Name:</span><input id="pupilName" placeholder="type your name">
+    <span style="margin-left:auto" class="save">Your work saves automatically.</span>
+  </div></div>
+</header>
+
+<div class="wrap">
+
+  <div class="card">
+    <p><b>What this lesson is for.</b> This is your <b>exam redo (DIRT)</b> for the <b>nouns</b> in <b>Section A2 and A3</b> — naming the <b>case and number</b>, and translating <b>noun–adjective phrases</b>. Work on your own, in order. Do the <b>Copy this into your book</b> notes by hand. Answer a whole part, then press <b>Check</b>: right answers turn <span style="color:#548235;font-weight:700">green</span> and wrong ones turn <span class="v">red</span>, each with a note on <i>why</i>. <b>Checking locks that part &mdash; you only get one attempt</b>, so work carefully. Then <b>copy your corrections into your exercise book</b>. For the translation parts you also mark yourself <b>✓</b> or <b>✗</b> &mdash; be honest.</p>
+    <div class="keybar"><span>The golden rule:</span><span class="v">say the CASE and the NUMBER</span><span>and translate BOTH words in a phrase</span></div>
+    <p class="muted" style="margin-top:0">In A2 you must give <b>both</b> the case <b>and</b> the number (e.g. &lsquo;accusative plural&rsquo;). After <b class="v">cum, in, e/a, ex</b> the noun is <b>ablative</b>, never dative. In A3 translate <b>both</b> words and keep the plural.</p>
+    <h3 style="margin-bottom:6px">Choose where to start</h3>
+    <div class="paths">
+      <a href="#secA"><b>Not sure which case is which?</b>Start at <b>Part A</b> to name the case, then <b>Part B</b> for the number, then do the Core parts and the exam redo.</a>
+      <a href="#foundations"><b>Muddling ablative and dative?</b>Start with the <b>Case booster</b> — after <i>cum / in / e / a</i> it is always ablative.</a>
+      <a href="#secC"><b>Adjectives the problem?</b>Do <b>Part C</b> (beat the false friends: <i>laetae</i> = happy, not &lsquo;late&rsquo;) and <b>Part D</b> (translate both words), then the exam redo.</a>
+    </div>
+    <p class="muted" style="margin-top:8px">Your headline score counts the <b>Core</b> essentials (parts A, B, C, D and the A2/A3 exam redo). More practice is extra &mdash; do as many as you can.</p>
+  </div>
+
+  <!-- DIRT REDO -->
+  <div class="dirtbox">
+    <div class="dh">✍ DIRT &mdash; your exam redo (do this first)</div>
+    <p style="margin-top:4px">Get your exam paper out and look at <b>Section A2 (case &amp; number)</b> and <b>A3 (the phrases)</b>. There were <b>three</b> ways the class threw marks away &mdash; find which one was <i>you</i>:</p>
+    <table style="font-size:14px">
+      <tr><th>The slip</th><th>What pupils wrote</th><th>What it should have been</th></tr>
+      <tr><td><b>Gave the case but not the number</b></td><td><span class="v">servos</span> = &lsquo;accusative&rsquo;</td><td><b>accusative plural</b> (you need both)</td></tr>
+      <tr><td><b>Said dative when it was ablative</b></td><td><span class="v">amico</span> = &lsquo;dative&rsquo;</td><td><b>ablative singular</b> (after <i>cum</i>)</td></tr>
+      <tr><td><b>Dropped the adjective / false friend</b></td><td><span class="v">puellae laetae</span> = &lsquo;late girls&rsquo;</td><td><b>(the) happy girls</b></td></tr>
+    </table>
+    <p style="margin:8px 0 4px">The real answers of the eight: <span class="v">servos</span> accusative plural · <span class="v">puellae</span> nominative plural · <span class="v">amico</span> ablative singular · <span class="v">villis</span> ablative plural · <span class="v">servus bonus</span> a good slave · <span class="v">puellae laetae</span> the happy girls · <span class="v">templum magnum</span> a big temple · <span class="v">nautae miseri</span> wretched sailors.</p>
+    <p style="margin-bottom:4px"><b>Your redo <span class="reqstar">*</span></b> &mdash; which A2/A3 nouns did <i>you</i> lose marks on, and which slip was it? Write each one, what you put, and what it should be. (You must fill this in.)</p>
+    <textarea id="dirt" placeholder="e.g. I wrote servos = 'accusative'. I forgot the number — it is accusative PLURAL.&#10;I wrote amico = 'dative'. After cum it is ABLATIVE singular.&#10;I wrote puellae laetae = 'late girls'. laetae means happy, so it is 'the happy girls'."></textarea>
+  </div>
+
+  <!-- PART 1 KNOW IT -->
+  <h2 class="part">Part 1 · Know It — case, number &amp; agreement</h2>
+
+  <div class="note">
+    <span class="tag">✍ COPY THIS INTO YOUR BOOK</span>
+    <label class="done"><input type="checkbox" data-copy="t0"> done</label>
+    <div class="nh">THE GOLDEN RULE — case AND number</div>
+    <div class="cap">In A2 one word on its own is not enough. Give the <b>case</b> and the <b>number</b> together, e.g. ‘accusative plural’.</div>
+    <table class="end">
+      <tr><td class="h">Latin</td><td class="h">✗ scores 0 (half an answer)</td><td class="h">✓ scores the mark</td></tr>
+      <tr><td><b class="v">servos</b></td><td>‘accusative’</td><td>accusative plural</td></tr>
+      <tr><td><b class="v">amico</b></td><td>‘dative’</td><td>ablative singular</td></tr>
+    </table>
+  </div>
+
+  <p>The <b>case</b> is the job a noun does in the sentence. The <b>ending</b> tells you the case and the number. Learn these five jobs.</p>
+  <div class="note">
+    <span class="tag">✍ COPY THIS INTO YOUR BOOK</span>
+    <label class="done"><input type="checkbox" data-copy="t1"> done</label>
+    <div class="nh">THE 5 CASES — the job each one does</div>
+    <table class="tenses">
+      <tr><td class="h">NOMINATIVE</td><td>the <b>subject</b> — who/what does the verb</td><td><b class="v">servus</b> laborat = the slave works</td></tr>
+      <tr><td class="h">ACCUSATIVE</td><td>the <b>object</b> — who/what receives it</td><td>servum video = I see the <b class="v">slave</b></td></tr>
+      <tr><td class="h">GENITIVE</td><td><b>of</b> — belonging</td><td>villa <b class="v">domini</b> = the house of the master</td></tr>
+      <tr><td class="h">DATIVE</td><td><b>to / for</b></td><td>cibum <b class="v">servo</b> dat = he gives food to the slave</td></tr>
+      <tr><td class="h">ABLATIVE</td><td><b>by / with / from</b>, and after <b class="v">cum, in, e/a, ex</b></td><td>cum <b class="v">amico</b> = with a friend</td></tr>
+    </table>
+  </div>
+
+  <div class="note">
+    <span class="tag">✍ COPY THIS INTO YOUR BOOK</span>
+    <label class="done"><input type="checkbox" data-copy="t2"> done</label>
+    <div class="nh">THE ENDINGS — 1st and 2nd declension</div>
+    <div class="cap">Read down the columns. These cover every noun in A2.</div>
+    <table class="end">
+      <tr><td class="h">case</td><td class="h">1st (puella)</td><td class="h">2nd (servus)</td><td class="h">2nd n. (templum)</td></tr>
+      <tr><td>nom sg</td><td><b class="v">-a</b> puella</td><td><b class="v">-us</b> servus</td><td><b class="v">-um</b> templum</td></tr>
+      <tr><td>acc sg</td><td><b class="v">-am</b> puellam</td><td><b class="v">-um</b> servum</td><td><b class="v">-um</b> templum</td></tr>
+      <tr><td>abl sg</td><td><b class="v">-a</b> puella</td><td><b class="v">-o</b> servo</td><td><b class="v">-o</b> templo</td></tr>
+      <tr><td>nom pl</td><td><b class="v">-ae</b> puellae</td><td><b class="v">-i</b> servi</td><td><b class="v">-a</b> templa</td></tr>
+      <tr><td>acc pl</td><td><b class="v">-as</b> puellas</td><td><b class="v">-os</b> servos</td><td><b class="v">-a</b> templa</td></tr>
+      <tr><td>abl pl</td><td><b class="v">-is</b> villis</td><td><b class="v">-is</b> servis</td><td><b class="v">-is</b> templis</td></tr>
+    </table>
+    <div>So <b class="v">servos</b> = -os = accusative <b>plural</b>; <b class="v">villis</b> = -is = ablative <b>plural</b>; <b class="v">amico</b> = -o = ablative <b>singular</b>.</div>
+  </div>
+
+  <div class="note">
+    <span class="tag">✍ COPY THIS INTO YOUR BOOK</span>
+    <label class="done"><input type="checkbox" data-copy="t3"> done</label>
+    <div class="nh">THE TRAP 1 — ablative, NOT dative</div>
+    <div class="cap">-o (sg) and -is (pl) can be dative OR ablative. After a preposition it is ALWAYS ablative.</div>
+    <div>After <b class="v">cum</b> (with), <b class="v">in</b> (in/on), <b class="v">e/ex</b> (out of), <b class="v">a/ab</b> (from) → <b>ablative</b>. So <b class="v">cum amico</b> = ablative, <b class="v">in villis</b> = ablative. In the exam these were marked dative — they are ablative.</div>
+  </div>
+
+  <div class="note">
+    <span class="tag">✍ COPY THIS INTO YOUR BOOK</span>
+    <label class="done"><input type="checkbox" data-copy="t4"> done</label>
+    <div class="nh">THE TRAP 2 — adjectives agree; translate BOTH words</div>
+    <div class="cap">An adjective copies its noun’s case and number. Translate the noun AND the adjective, and keep the plural. Beware the English look-alikes.</div>
+    <table class="end">
+      <tr><td class="h">Latin</td><td class="h">looks like…</td><td class="h">but really means</td></tr>
+      <tr><td><b class="v">laetae</b></td><td>‘late’</td><td>happy</td></tr>
+      <tr><td><b class="v">miseri</b></td><td>‘mischievous’</td><td>wretched / miserable</td></tr>
+      <tr><td><b class="v">nautae</b></td><td>‘nature’</td><td>sailors</td></tr>
+      <tr><td><b class="v">magnum</b></td><td>‘magnum’</td><td>big / large</td></tr>
+    </table>
+    <div>So <b class="v">puellae laetae</b> = the <b>happy girls</b> (plural), <b class="v">nautae miseri</b> = <b>wretched sailors</b>.</div>
+  </div>
+
+  <!-- PART 2 WATCH IT -->
+  <h2 class="part">Part 2 · Watch It — worked examples</h2>
+  <p>Follow the thinking: <b>ending → case → number → job</b>.</p>
+  <table>
+    <tr><th style="width:160px">Noun</th><th>How to decode it</th></tr>
+    <tr><td><span class="v">servos</span></td><td>ends <b>-os</b> → 2nd declension <b>accusative plural</b>. In <i>dominus servos videt</i> it is the object → ‘the slaves’.</td></tr>
+    <tr><td><span class="v">amico</span></td><td>ends <b>-o</b> → could be dative or ablative. It follows <b>cum</b> → <b>ablative singular</b> → ‘with a friend’.</td></tr>
+    <tr><td><span class="v">villis</span></td><td>ends <b>-is</b> → plural. It follows <b>in</b> → <b>ablative plural</b> → ‘in the houses’.</td></tr>
+    <tr><td><span class="v">puellae laetae</span></td><td>both plural, agreeing. Translate both, keep the plural → ‘the happy girls’ (not ‘late’).</td></tr>
+  </table>
+
+  <!-- FOUNDATIONS (support) -->
+  <h2 class="part" id="foundations">Case booster <span class="badge b-supp">START HERE IF ABLATIVE/DATIVE MUDDLE YOU</span></h2>
+  <div class="card">
+    <p>For each noun, choose the <b>case AND number</b>. Watch the prepositions: after <i>cum / in / e / a / ex</i> it is <b>ablative</b>, never dative.</p>
+    <div class="qlist" id="secFND"></div>
+    <div class="secbtns"><button class="act" data-check="secFND">Check booster</button><span class="sectotal" data-tot="secFND"></span></div>
+    <div class="stopcheck">Got these? Good &mdash; now go to <b>Part 3, Part A</b>. The same nouns come back again and again.</div>
+  </div>
+
+  <!-- PART 3 TRY IT -->
+  <h2 class="part">Part 3 · Try It</h2>
+
+  <div class="card" id="secA"><h3 style="margin-top:0">A. Name the case <span class="badge b-core">CORE · everyone</span> <span class="muted">(8)</span></h3>
+    <p>Choose the case of each underlined noun. A short context is given — use the job it does and any preposition.</p>
+    <div class="qlist"></div>
+    <div class="secbtns"><button class="act" data-check="secA">Check A</button><span class="sectotal" data-tot="secA"></span></div>
+    <div class="stopcheck">Once you press <b>Check</b> this part locks. Copy each correction into your book, and beside it write the ending rule (<span class="v">-us</span> nom sg &nbsp; <span class="v">-um/-os/-as</span> accusative &nbsp; after <span class="v">cum/in</span> = ablative). Doing the corrections is what moves your score up next time.</div>
+  </div>
+
+  <div class="card" id="secB"><h3 style="margin-top:0">B. Singular or plural? <span class="badge b-core">CORE · everyone</span> <span class="muted">(8)</span></h3>
+    <p>Type the NUMBER of each noun: <b>singular</b> or <b>plural</b>. (Same nouns as Part A — now you have the case AND the number.)</p>
+    <div class="qlist"></div>
+    <div class="secbtns"><button class="act" data-check="secB">Check B</button><span class="sectotal" data-tot="secB"></span></div>
+  </div>
+
+  <div class="card" id="secC"><h3 style="margin-top:0">C. Adjective meanings <span class="badge b-core">CORE · everyone</span> <span class="muted">(8)</span></h3>
+    <p>Choose the correct English for each adjective. Beat the false friends: <i>laetae</i> = happy (not &lsquo;late&rsquo;), <i>miseri</i> = wretched (not &lsquo;mischievous&rsquo;).</p>
+    <div class="qlist"></div>
+    <div class="secbtns"><button class="act" data-check="secC">Check C</button><span class="sectotal" data-tot="secC"></span></div>
+  </div>
+
+  <div class="card" id="secD"><h3 style="margin-top:0">D. Translate the phrase <span class="badge b-core">CORE · everyone</span> <span class="muted">(8)</span></h3>
+    <p>Translate the whole noun–adjective phrase. Translate <b>both</b> words and keep the plural.</p>
+    <p class="stopcheck" style="margin-top:0"><b>Marking honestly:</b> both words must be right and the number must match. Mark yourself <b>✗</b> if you dropped the adjective or made a plural singular &mdash; e.g. &lsquo;girl&rsquo; is <b>not</b> a tick for <span class="v">puellae laetae</span> (the happy girls).</p>
+    <details class="vocab"><summary>Words — open only if you&rsquo;re stuck</summary>
+      <div class="vlist">servus = slave · puella = girl · templum = temple · nauta = sailor · dominus = master · villa = house · bonus = good · magnus = big · laetus = happy · miser = wretched · malus = bad · parvus = small</div></details>
+    <div class="qlist"></div>
+    <div class="secbtns"><button class="act" data-check="secD">Check D</button><span class="sectotal" data-tot="secD"></span></div>
+  </div>
+
+  <div class="card" id="secE"><h3 style="margin-top:0">E. Decline the noun <span class="badge b-plus">MORE PRACTICE</span> <span class="muted">(8)</span></h3>
+    <p>Fill the missing forms. The nominative singular is given.</p>
+    <table><tr><th>Noun</th><th>Nom sg</th><th>Acc sg</th><th>Nom pl</th></tr><tbody class="gridbody"></tbody></table>
+    <div class="secbtns"><button class="act" data-check="secE">Check E</button><span class="sectotal" data-tot="secE"></span></div>
+  </div>
+
+  <div class="card" id="secF"><h3 style="margin-top:0">F. Spot the noun in a sentence <span class="badge b-plus">MORE PRACTICE</span> <span class="muted">(8)</span></h3>
+    <p>These are the real A2 sentences. Name the case of the underlined noun (drop-down) and translate that noun only.</p>
+    <div class="qlist"></div>
+    <div class="secbtns"><button class="act" data-check="secF">Check F</button><span class="sectotal" data-tot="secF"></span></div>
+  </div>
+
+  <!-- PART 4 PROVE IT -->
+  <h2 class="part">Part 4 · Prove It — the real exam redo</h2>
+  <p>The actual <b>A2 nouns</b> and <b>A3 phrases</b> from your Summer Examination. No notes &mdash; then check. This is your exit check.</p>
+  <div class="target"><b>Target:</b> <b>8 / 8</b> below = full marks on A2 and A3. That is what we are aiming for.</div>
+
+  <div class="card" id="secG"><h3 style="margin-top:0">A2 &amp; A3. The exam nouns &amp; phrases <span class="badge b-core">CORE · exam</span> <span class="muted">(8)</span></h3>
+    <p class="stopcheck" style="margin-top:0"><b>Exam standard:</b> for A2 give the <b>case AND number</b> (e.g. &lsquo;accusative plural&rsquo;). For A3 translate <b>both</b> words and keep the plural. A case without its number, or a dropped adjective, scores 0 in the real paper.</p>
+    <div class="qlist"></div>
+    <div class="secbtns"><button class="act" data-check="secG">Check A2/A3</button><span class="sectotal" data-tot="secG"></span></div>
+  </div>
+
+  <div class="card" id="secH"><h3 style="margin-top:0">Fresh exam-style set <span class="badge b-plus">MORE PRACTICE</span> <span class="muted">(8)</span></h3>
+    <p>Same verbs, different forms. Prove you can do it again.</p>
+    <div class="qlist"></div>
+    <div class="secbtns"><button class="act" data-check="secH">Check extra</button><span class="sectotal" data-tot="secH"></span></div>
+  </div>
+
+  <!-- PART 5 CHECK IT -->
+  <h2 class="part">Part 5 · Check It</h2>
+  <div class="card">
+    <p><b>How confident are you now at case, number and agreement?</b> Tap one.</p>
+    <div class="rag" id="rag">
+      <label class="r" data-rag="R"><input type="radio" name="rag" value="R">RED<br><span class="muted">I still mix up the cases / endings</span></label>
+      <label class="a" data-rag="A"><input type="radio" name="rag" value="A">AMBER<br><span class="muted">Mostly there — the odd slip</span></label>
+      <label class="g" data-rag="G"><input type="radio" name="rag" value="G">GREEN<br><span class="muted">I can give case + number for any noun</span></label>
+    </div>
+    <p style="margin-top:14px"><b>One ending rule I will learn by heart before Lesson 3:</b></p>
+    <textarea id="reflect" placeholder="write here…"></textarea>
+    <div class="note" style="margin-top:16px">
+      <span class="tag">✍ COPY THIS INTO YOUR BOOK</span>
+      <div><b>MY TAKEAWAY</b></div>
+      <div><b>Case AND number.</b> Never give just &lsquo;accusative&rsquo; — say &lsquo;accusative plural&rsquo;.</div>
+      <div>After <b class="v">cum, in, e/a, ex</b> the noun is <b>ablative</b>, not dative.</div>
+      <div>Adjectives agree: translate <b>both</b> words and keep the plural. <b class="v">laetae</b> = happy, not &lsquo;late&rsquo;.</div>
+    </div>
+  </div>
+
+  <!-- RETRIEVAL (tomorrow) -->
+  <h2 class="part">Come back tomorrow <span class="badge b-tom">DAY 2 · 5 min</span></h2>
+  <div class="card">
+    <p><b>Best done the day after the lesson.</b> Re-open this file tomorrow and do this quick recall &mdash; spacing it out is what makes it stick.</p>
+    <div class="qlist" id="secR"></div>
+    <div class="secbtns"><button class="act" data-check="secR">Check recall</button><span class="sectotal" data-tot="secR"></span> <span class="muted" id="rdate"></span></div>
+  </div>
+</div>
+
+<div class="toolbar"><div class="inner">
+  <span class="sectotal" id="grandtotal">Core 0 / 0</span>
+  <span class="readybadge no" id="ready">keep going</span>
+  <span class="grow"></span>
+  <button onclick="toggleRead()" id="readbtn">Aa Readability</button>
+  <button onclick="copyForTeacher()">Copy results for my teacher</button>
+  <button onclick="downloadWork()">Download my answers</button>
+  <button onclick="window.print()">Print / Save PDF</button>
+  <button onclick="resetAll()">Clear</button>
+  <button class="primary" onclick="saveNow(true)">Save now</button>
+</div></div>
+
+<script>
+const CASES=["Nominative","Accusative","Genitive","Dative","Ablative"];
+function whyCase(c){return {
+  Nominative:"nominative = the SUBJECT (who/what does the verb).",
+  Accusative:"accusative = the OBJECT; endings -um / -am / -os / -as.",
+  Genitive:"genitive = 'of' (belonging).",
+  Dative:"dative = 'to/for' — but after cum/in/e/a/ex it is ABLATIVE, not dative.",
+  Ablative:"ablative = by/with/from, and after cum, in, e/a, ex."}[c]||"";}
+
+// Case booster (support): [stem, [opts], answer(case+number), whyHint]
+const FND=[
+ ["servos",["nominative plural","accusative plural","genitive singular"],"accusative plural","-os = accusative plural (2nd decl)."],
+ ["amico (after cum)",["dative singular","ablative singular","accusative singular"],"ablative singular","after cum → ablative, NOT dative."],
+ ["villis (after in)",["dative plural","ablative plural","nominative plural"],"ablative plural","after in → ablative; -is here = plural."],
+ ["puellae (subject)",["nominative plural","genitive singular","accusative plural"],"nominative plural","subject → nominative; -ae = plural."],
+ ["templum (object)",["nominative singular","accusative singular","ablative singular"],"accusative singular","neuter: nom=acc; object → accusative singular."],
+ ["dominus",["nominative singular","accusative singular","ablative plural"],"nominative singular","-us = nominative singular (2nd decl)."]
+];
+// A name the case (core): [noun(+context), gloss, case]
+const A=[
+ ["servos","slaves — object of videt","Accusative"],
+ ["puellae","girls — subject of portant","Nominative"],
+ ["cum amico","with a friend","Ablative"],
+ ["in villis","in the houses","Ablative"],
+ ["dominus","master — subject","Nominative"],
+ ["servum","slave — object","Accusative"],
+ ["in horto","in the garden","Ablative"],
+ ["templa","temples — object","Accusative"]
+];
+// B number (core): [noun, gloss, accept[], why]
+const B=[
+ ["servos","slaves",["plural","pl"],"-os = plural (accusative pl)."],
+ ["puellae","girls",["plural","pl"],"-ae here = plural (nominative pl)."],
+ ["amico","friend",["singular","sg","sing"],"-o = singular (ablative sg)."],
+ ["villis","houses",["plural","pl"],"-is = plural (ablative pl)."],
+ ["dominus","master",["singular","sg","sing"],"-us = singular."],
+ ["templa","temples",["plural","pl"],"-a = plural (neuter nom/acc pl)."],
+ ["puer","boy",["singular","sg","sing"],"no plural ending → singular."],
+ ["nautae","sailors",["plural","pl"],"-ae = plural."]
+];
+// C adjective meaning (core): [adjective, meaning]  — fixed options pool
+const COPTS=["good","big","happy","wretched","bad","many","small","Roman"];
+const C=[
+ ["bonus","good"],["magnum","big"],["laetae","happy"],["miseri","wretched"],
+ ["malus","bad"],["multos","many"],["parva","small"],["Romanus","Roman"]
+];
+// D translate the phrase (core, self): [phrase, model, accept]
+const D=[
+ ["servus bonus","a good slave",["good slave"]],
+ ["puellae laetae","the happy girls",["happy girl"]],
+ ["templum magnum","a big temple",["big temple","large temple"]],
+ ["nautae miseri","the wretched sailors",["wretched sailor","miserable sailor","sad sailor"]],
+ ["dominus bonus","a good master",["good master"]],
+ ["villa magna","a big house",["big house","large house","big villa"]],
+ ["servi mali","the bad slaves",["bad slave","wicked slave","evil slave"]],
+ ["puella parva","the small girl",["small girl","little girl"]]
+];
+// E decline (plus, txt): [label, nom-sg(given), acc-sg, nom-pl]
+const E=[
+ ["puella (girl, 1st)","puella","puellam","puellae"],
+ ["servus (slave, 2nd)","servus","servum","servi"],
+ ["templum (temple, 2nd n.)","templum","templum","templa"],
+ ["nauta (sailor, 1st)","nauta","nautam","nautae"]
+];
+const EWHY={acc:"accusative sg = -am (1st) / -um (2nd).",pl:"nominative pl = -ae (1st) / -i (2nd) / -a (neuter)."};
+// F spot noun (plus): [sentence, noun, case, model-meaning, accept]
+const F=[
+ ["dominus servos in horto videt.","servos","Accusative","the slaves",["slave"]],
+ ["puer cum amico ambulabat.","amico","Ablative","with a/the friend",["friend"]],
+ ["puellae aquam portant.","puellae","Nominative","the girls",["girl"]],
+ ["Romani in villis habitabant.","villis","Ablative","in the houses",["house","villa"]]
+];
+// G exam A2/A3 (core, self) — the real eight: [item, model, accept]
+const G=[
+ ["servos  (dominus servos in horto videt)","accusative plural",["accusative plural","accusative pl","acc plural","acc pl"]],
+ ["puellae  (puellae aquam portant)","nominative plural",["nominative plural","nominative pl","nom plural","nom pl"]],
+ ["amico  (puer cum amico ambulabat)","ablative singular",["ablative singular","ablative sg","abl singular","abl sg","ablative sing"]],
+ ["villis  (Romani in villis habitabant)","ablative plural",["ablative plural","ablative pl","abl plural","abl pl"]],
+ ["servus bonus","a good slave",["good slave"]],
+ ["puellae laetae","(the) happy girls",["happy girl"]],
+ ["templum magnum","a big / large temple",["big temple","large temple"]],
+ ["nautae miseri","wretched / miserable sailors",["wretched sailor","miserable sailor","sad sailor"]]
+];
+// H fresh set (plus, self): [item, model, accept]
+const H=[
+ ["servum","accusative singular",["accusative singular","accusative sg","acc singular","acc sg"]],
+ ["puellis (after in)","ablative plural",["ablative plural","ablative pl","abl plural","abl pl"]],
+ ["domino (after cum)","ablative singular",["ablative singular","ablative sg","abl singular","abl sg"]],
+ ["nautae","nominative plural",["nominative plural","nominative pl","nom plural","nom pl"]],
+ ["dominus malus","a bad master",["bad master","wicked master","evil master"]],
+ ["templa magna","big temples",["big temple","large temple"]],
+ ["villa parva","a small house",["small house","little house","small villa"]],
+ ["servi boni","good slaves",["good slave"]]
+];
+// Retrieval (tomorrow): [noun, gloss, case]
+const R=[
+ ["servos","slaves — object","Accusative"],["amico","with a friend","Ablative"],["puellae","girls — subject","Nominative"],
+ ["villis","in the houses","Ablative"],["dominum","master — object","Accusative"],["puer","boy — subject","Nominative"]
+];
+
+/* TIERS: which sections count to the headline Core score */
+const CORE=["secA","secB","secC","secD","secG"];
+
+/* ENGINE */
+let KEY="8jww_dirt_lesson2_v1";              /* namespaced per pupil after sign-in (cloud sync) */
+const KEY_BASE="8jww_dirt_lesson2_v1";
+let STATE={};
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
+let saveT;
+function saveNow(flash){collect();localStorage.setItem(KEY,JSON.stringify(STATE));mirrorToCloud();
+  const s=document.getElementById('savestatus');s.textContent="saved ✓";
+  if(flash){s.textContent="saved ✓ just now";setTimeout(()=>s.textContent="saved ✓",1500);}}
+function queueSave(){document.getElementById('savestatus').textContent="saving…";clearTimeout(saveT);saveT=setTimeout(()=>saveNow(false),500);}
+function norm(s){return(s||"").toLowerCase().replace(/[’']/g,"'").replace(/[().,;!]/g,"").replace(/\s+/g," ").trim();}
+function accepts(val,acc){const n=norm(val);if(!n)return false;return acc.some(a=>{a=norm(a);return n===a||n.includes(a);});}
+function exact(val,arr){const n=norm(val);return arr.some(a=>norm(a)===n);}
+function isObjective(x){return x.kind==="sel"||x.kind==="txt";}
+
+const Q=[];
+function rowHTML(num,stemHTML,control,id,self){
+  const mk=self
+    ? `<span class="mark" id="${id}_mk"><button class="tick" onclick="setMark('${id}',1)">✓</button><button class="cross" onclick="setMark('${id}',0)">✗</button></span>`
+    : `<span class="mark" id="${id}_mk"></span>`;
+  return `<div class="q" id="${id}_row"><span class="num">${num}</span><span class="stem">${stemHTML} ${control}
+    <span class="model" id="${id}_m"></span><div class="why" id="${id}_w"></div></span>${mk}</div>`;
+}
+function selCtrl(id,opts){return `<select class="ans" id="${id}_i" onchange="queueSave()"><option value=""></option>${opts.map(t=>`<option>${t}</option>`).join("")}</select>`;}
+function txtCtrl(id){return `<input class="ans" id="${id}_i" oninput="queueSave()">`;}
+
+function render(){
+  let h;
+  // Foundations (meaning booster)
+  h="";FND.forEach((it,i)=>{const id="FND"+i;Q.push({id,sec:"secFND",tier:"support",kind:"sel",ans:it[2],why:it[3]});
+    h+=rowHTML(i+1,`<span class="v">${it[0]}</span> →`,selCtrl(id,it[1]),id,false);});
+  document.querySelector("#secFND").innerHTML=h;
+  // A
+  h="";A.forEach((it,i)=>{const id="A"+i;Q.push({id,sec:"secA",tier:"core",kind:"sel",ans:it[2],why:whyCase(Array.isArray(it[2])?it[2][0]:it[2])});
+    h+=rowHTML(i+1,`<span class="v">${it[0]}</span><span class="gloss">(${it[1]})</span>`,selCtrl(id,CASES),id,false);});
+  document.querySelector("#secA .qlist").innerHTML=h;
+  // B
+  h="";B.forEach((it,i)=>{const id="B"+i;Q.push({id,sec:"secB",tier:"core",kind:"txt",accept:it[2],model:it[2][0],why:it[3]});
+    h+=rowHTML(i+1,`<span class="v">${it[0]}</span><span class="gloss">(${it[1]})</span> =`,txtCtrl(id),id,false);});
+  document.querySelector("#secB .qlist").innerHTML=h;
+  // C (meaning select)
+  h="";C.forEach((it,i)=>{const id="C"+i;Q.push({id,sec:"secC",tier:"core",kind:"sel",ans:it[1],why:"the eight core verbs — learn them by heart."});
+    h+=rowHTML(i+1,`<span class="v">${it[0]}</span> =`,selCtrl(id,COPTS),id,false);});
+  document.querySelector("#secC .qlist").innerHTML=h;
+  // D translate fully
+  h="";D.forEach((it,i)=>{const id="D"+i;Q.push({id,sec:"secD",tier:"core",kind:"self",accept:it[2],model:it[1]});
+    h+=rowHTML(i+1,`<span class="v">${it[0]}</span> =`,txtCtrl(id),id,true);});
+  document.querySelector("#secD .qlist").innerHTML=h;
+  // E grid
+  h="";E.forEach((row,r)=>{h+=`<tr><td><b>${row[0]}</b></td><td><span class="v">${row[1]}</span></td>`;
+    [["acc",2],["pl",3]].forEach(([k,c])=>{const id="E"+r+"_"+k;Q.push({id,sec:"secE",tier:"plus",kind:"txt",accept:[row[c]],model:row[c],why:EWHY[k]});
+      h+=`<td><input class="ans" style="min-width:90px" id="${id}_i" oninput="queueSave()"><span class="model" id="${id}_m"></span>
+        <div class="why" id="${id}_w"></div><span class="mark" id="${id}_mk"></span></td>`;});
+    h+="</tr>";});
+  document.querySelector("#secE .gridbody").innerHTML=h;
+  // F
+  h="";F.forEach((it,i)=>{const tid="F"+i+"_t",mid="F"+i+"_m2";
+    Q.push({id:tid,sec:"secF",tier:"plus",kind:"sel",ans:it[2],why:whyCase(it[2])});Q.push({id:mid,sec:"secF",tier:"plus",kind:"self",accept:it[4],model:it[3]});
+    h+=`<div class="q" id="${tid}_row"><span class="num">${i+1}</span><span class="stem"><i>${it[0]}</i> &nbsp; verb: <span class="v">${it[1]}</span><br>
+      tense: ${selCtrl(tid,CASES)} <span class="model" id="${tid}_m"></span><div class="why" id="${tid}_w"></div>
+      meaning: <input class="ans" id="${mid}_i" oninput="queueSave()"> <span class="model" id="${mid}_m"></span></span>
+      <span class="mark" id="${tid}_mk"></span>
+      <span class="mark" id="${mid}_mk"><button class="tick" onclick="setMark('${mid}',1)">✓</button><button class="cross" onclick="setMark('${mid}',0)">✗</button></span></div>`;});
+  document.querySelector("#secF .qlist").innerHTML=h;
+  // G exam A1
+  h="";G.forEach((it,i)=>{const id="G"+i;Q.push({id,sec:"secG",tier:"core",kind:"self",accept:it[2],model:it[1]});
+    h+=rowHTML(i+1,`<span class="v">${it[0]}</span> =`,txtCtrl(id),id,true);});
+  document.querySelector("#secG .qlist").innerHTML=h;
+  // H fresh set
+  h="";H.forEach((it,i)=>{const id="H"+i;Q.push({id,sec:"secH",tier:"plus",kind:"self",accept:it[2],model:it[1]});
+    h+=rowHTML(i+1,`<span class="v">${it[0]}</span> =`,txtCtrl(id),id,true);});
+  document.querySelector("#secH .qlist").innerHTML=h;
+  // Retrieval
+  h="";R.forEach((it,i)=>{const id="R"+i;Q.push({id,sec:"secR",tier:"retrieval",kind:"sel",ans:it[2],why:whyCase(it[2])});
+    h+=rowHTML(i+1,`<span class="v">${it[0]}</span><span class="gloss">(${it[1]})</span>`,selCtrl(id,CASES),id,false);});
+  document.querySelector("#secR").innerHTML=h;
+  restore();updateScore();
+}
+
+function q(id){return Q.find(x=>x.id===id);}
+function sectionComplete(sec){let ok=true;
+  Q.filter(x=>x.sec===sec).forEach(x=>{const i=document.getElementById(x.id+"_i");
+    if(i){const empty=!i.value.trim();i.classList.toggle("need",empty);if(empty)ok=false;}});return ok;}
+function checkSec(sec){
+  if(STATE.revealed&&STATE.revealed.includes(sec))return; // already checked — locked, one attempt only
+  if(sec==="secG"){ // exit check is gated behind the DIRT redo (evidence first)
+    const d=(val("dirt")||"").trim();
+    if(d.length<3){ const t=document.getElementById("dirt");
+      alert("Do your DIRT redo first. At the top of the page, write which A1 verbs you got wrong in the exam and what they really mean. You can't do the exam redo until that's done.");
+      if(t){t.classList.add("need");t.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>t.focus(),300);} return; }
+  }
+  if(!sectionComplete(sec)){alert("Answer every question in this part before you check it. You only get one go, so check your answers first.");return;}
+  if(!confirm("Check and LOCK this part? You can't change your answers afterwards — do your corrections in your exercise book.")) return;
+  STATE.revealed=STATE.revealed||[];if(!STATE.revealed.includes(sec))STATE.revealed.push(sec);
+  if(sec==="secR"&&!STATE.rdone){STATE.rdone=new Date().toLocaleDateString();}
+  revealSec(sec);saveNow(false);updateScore();
+}
+function lockSection(sec){
+  Q.filter(x=>x.sec===sec).forEach(x=>{const i=document.getElementById(x.id+"_i");if(i)i.disabled=true;});
+  const btn=document.querySelector('button[data-check="'+sec+'"]');
+  if(btn){btn.disabled=true;btn.classList.add("locked");btn.textContent="Checked ✓ — locked";}
+}
+function revealSec(sec){
+  STATE.auto=STATE.auto||{};
+  Q.filter(x=>x.sec===sec).forEach(x=>{
+    const row=document.getElementById(x.id+"_row"),inp=document.getElementById(x.id+"_i"),
+      m=document.getElementById(x.id+"_m"),w=document.getElementById(x.id+"_w"),mk=document.getElementById(x.id+"_mk");
+    let auto,model;
+    if(x.kind==="sel"){const v=inp?inp.value:"";auto=Array.isArray(x.ans)?x.ans.includes(v):v===x.ans;model=Array.isArray(x.ans)?x.ans.join(" or "):x.ans;}
+    else if(x.kind==="txt"){auto=exact(inp?inp.value:"",x.accept);model=x.model;}
+    else{auto=accepts(inp?inp.value:"",x.accept);model=x.model;}
+    STATE.auto[x.id]=auto;
+    if(m)m.innerHTML=" &nbsp;&rarr; "+model;
+    if(w&&x.why)w.textContent="why: "+x.why;
+    if(row){row.classList.add("revealed");row.classList.toggle("ok",auto===true);row.classList.toggle("no",auto===false);}
+    if(mk){
+      if(isObjective(x)){mk.innerHTML='<span class="verdict '+(auto?'y':'n')+'">'+(auto?'✓':'✗')+'</span>';}
+      else{if(!(STATE.marks&&STATE.marks[x.id]!==undefined))setMark(x.id,auto?1:0,true);paintMark(x.id);}
+    }
+  });
+  lockSection(sec);
+  if(sec==="secR"&&STATE.rdone)document.getElementById("rdate").textContent="recall done: "+STATE.rdone;
+}
+function setMark(id,val,silent){const x=q(id);if(x&&isObjective(x))return;
+  STATE.marks=STATE.marks||{};STATE.marks[id]=val;paintMark(id);if(!silent){updateScore();queueSave();}}
+function paintMark(id){const mk=document.getElementById(id+"_mk");if(!mk)return;
+  const t=mk.querySelector(".tick"),c=mk.querySelector(".cross");if(!t||!c)return;
+  const v=STATE.marks&&STATE.marks[id];t.classList.toggle("on",v===1);c.classList.toggle("on",v===0);}
+function scored(x){return isObjective(x)?(STATE.auto&&STATE.auto[x.id]===true):(STATE.marks&&STATE.marks[x.id]===1);}
+function updateScore(){
+  let coreGot=0,coreTot=0,secGot={},secTot={};
+  Q.forEach(x=>{secTot[x.sec]=(secTot[x.sec]||0)+1;const s=scored(x);if(s)secGot[x.sec]=(secGot[x.sec]||0)+1;
+    if(x.tier==="core"){coreTot++;if(s)coreGot++;}});
+  const pct=coreTot?Math.round(100*coreGot/coreTot):0;
+  document.getElementById("scorepill").textContent="Core "+coreGot+" / "+coreTot+" ("+pct+"%)";
+  document.getElementById("grandtotal").textContent="Core "+coreGot+" / "+coreTot+" ("+pct+"%)";
+  const ready=document.getElementById("ready");
+  if(ready){const ok=coreTot>0&&pct>=70;
+    ready.className="readybadge "+(ok?"yes":"no");
+    ready.textContent=ok?"✓ Ready for Lesson 3":"keep going";}
+  document.querySelectorAll("[data-tot]").forEach(el=>{const s=el.getAttribute("data-tot");el.textContent=(secGot[s]||0)+" / "+(secTot[s]||0);});
+}
+
+/* readability cycle: 0 normal · 1 easy-read (plain font) · 2 large */
+let READMODE=0;
+function applyRead(){document.body.classList.toggle("plain",READMODE>=1);document.body.classList.toggle("big",READMODE>=2);
+  const b=document.getElementById("readbtn");if(b)b.textContent=["Aa Readability","Aa Easy-read","Aa Large text"][READMODE];}
+function toggleRead(){READMODE=(READMODE+1)%3;applyRead();STATE.read=READMODE;queueSave();}
+
+function collect(){
+  STATE.name=val("pupilName");STATE.reflect=val("reflect");STATE.dirt=val("dirt");
+  STATE.copy={};document.querySelectorAll("[data-copy]").forEach(c=>STATE.copy[c.getAttribute("data-copy")]=c.checked);
+  const r=document.querySelector('input[name=rag]:checked');STATE.rag=r?r.value:STATE.rag||"";
+  STATE.inputs={};Q.forEach(x=>{const i=document.getElementById(x.id+"_i");if(i)STATE.inputs[x.id]=i.value;});
+  STATE.read=READMODE;
+}
+function restore(){
+  if(STATE.read){READMODE=STATE.read;applyRead();}
+  if(STATE.name)setVal("pupilName",STATE.name);if(STATE.reflect)setVal("reflect",STATE.reflect);if(STATE.dirt)setVal("dirt",STATE.dirt);
+  if(STATE.copy)document.querySelectorAll("[data-copy]").forEach(c=>{if(STATE.copy[c.getAttribute("data-copy")])c.checked=true;});
+  if(STATE.rag){const el=document.querySelector('input[name=rag][value="'+STATE.rag+'"]');if(el){el.checked=true;markRag();}}
+  if(STATE.inputs)Q.forEach(x=>{const i=document.getElementById(x.id+"_i");if(i&&STATE.inputs[x.id]!==undefined)i.value=STATE.inputs[x.id];});
+  if(STATE.revealed)STATE.revealed.forEach(sec=>revealSec(sec));
+  if(STATE.marks)Object.keys(STATE.marks).forEach(id=>paintMark(id));
+}
+const val=id=>{const e=document.getElementById(id);return e?e.value:"";};
+const setVal=(id,v)=>{const e=document.getElementById(id);if(e)e.value=v;};
+function markRag(){document.querySelectorAll('#rag label').forEach(l=>l.classList.remove('sel'));
+  const r=document.querySelector('input[name=rag]:checked');if(r)r.closest('label').classList.add('sel');}
+
+const SECNAME={secFND:"Case booster",secA:"A Case",secB:"B Number",secC:"C Adjective",secD:"D Phrase",secE:"E Endings",secF:"F Spot",secG:"A2/A3 exam redo",secH:"Extra set",secR:"Recall"};
+function summary(){
+  collect();let coreGot=0,coreTot=0;const secLine={};
+  Q.forEach(x=>{const s=scored(x);if(x.tier==="core"){coreTot++;if(s)coreGot++;}
+    secLine[x.sec]=secLine[x.sec]||{g:0,t:0};secLine[x.sec].t++;if(s)secLine[x.sec].g++;});
+  let t="Y8 8JWW · DIRT Lesson 2 (Case Detective) — "+(STATE.name||"(no name)")+"\n";
+  t+="CORE score: "+coreGot+" / "+coreTot+"   |   A2/A3 exam redo target 8/8: "+(secLine.secG?secLine.secG.g+"/"+secLine.secG.t:"-")+"\n";
+  t+="Confidence (RAG): "+(STATE.rag||"-")+"   |   Recall (day 2): "+(STATE.rdone||"not yet")+"\n";
+  t+="By section: "+Object.keys(secLine).map(s=>(SECNAME[s]||s)+" "+secLine[s].g+"/"+secLine[s].t).join(" · ")+"\n";
+  t+="DIRT redo: "+(STATE.dirt||"(not written)")+"\n";
+  t+="Learn next: "+(STATE.reflect||"")+"\n";
+  t+="Corrections: done in exercise book.\n";
+  return t;
+}
+function copyForTeacher(){const t=summary();
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(()=>alert("Copied! Paste it into Teams or OneNote for your teacher."),()=>prompt("Copy this for your teacher:",t));}
+  else prompt("Copy this for your teacher:",t);}
+function downloadWork(){collect();let t=summary()+"\n--- all answers ---\n";
+  Q.forEach(x=>{const a=(STATE.inputs&&STATE.inputs[x.id])||"";const m=scored(x);t+=x.id+": "+a+"  ["+(m?"✓":"✗")+"]\n";});
+  const blob=new Blob([t],{type:"text/plain"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);
+  a.download="8JWW_DIRT_Lesson2_"+((STATE.name||"work").replace(/\s+/g,"_"))+".txt";a.click();}
+function resetAll(){if(!confirm("Clear all your answers on this device?"))return;localStorage.removeItem(KEY);STATE={};location.reload();}
+
+document.addEventListener("click",e=>{const b=e.target.closest("[data-check]");if(b)checkSec(b.getAttribute("data-check"));});
+document.addEventListener("change",e=>{if(e.target.name==="rag"){markRag();queueSave();}});
+document.addEventListener("input",e=>{if(e.target.classList&&e.target.classList.contains("ans"))e.target.classList.remove("need");});
+document.getElementById("pupilName").addEventListener("input",queueSave);
+document.getElementById("reflect").addEventListener("input",queueSave);
+document.getElementById("dirt").addEventListener("input",function(){this.classList.remove("need");queueSave();});
+document.querySelectorAll("[data-copy]").forEach(c=>c.addEventListener("change",queueSave));
+window.addEventListener("beforeunload",()=>saveNow(false));
+
+/* ====================================================================
+   CLOUD SYNC LAYER — class code + pupil name, no password.
+   Mirrors each pupil's work to the class store (Cloudflare Worker + KV)
+   so it follows them to any device, and the 8JWW DIRT Teacher Tracker
+   can collect every pupil's score. Same store as the Vestigia tools.
+   ==================================================================== */
+const CLOUD = { endpoint:"https://vestigia-store.mrbeasley930.workers.dev", book:"8jwwint-l2" };
+const LESSON = { id:"L2", title:"Case Detective (A2/A3)" };
+let IDENTITY = null;
+
+function userKey(){ return IDENTITY ? (IDENTITY.cls+"::"+IDENTITY.cand) : "anon"; }
+function fullKey(){ return CLOUD.book+"::"+userKey(); }
+
+const CloudStore = {
+  async pull(){
+    if(!CLOUD.endpoint) return null;
+    try{ const r=await fetch(CLOUD.endpoint+"?key="+encodeURIComponent(fullKey()),{method:"GET"});
+      if(!r.ok) return null; const j=await r.json(); return j&&j.data?j.data:null;
+    }catch(e){ console.warn("cloud pull failed; this device only.",e); return null; }
+  },
+  async push(blob){
+    if(!CLOUD.endpoint||!IDENTITY) return false;
+    try{ const r=await fetch(CLOUD.endpoint,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({key:fullKey(),cls:IDENTITY.cls,cand:IDENTITY.cand,book:CLOUD.book,
+                             data:blob,savedAt:new Date().toISOString()})});
+      return r.ok;
+    }catch(e){ console.warn("cloud push failed; kept on this device.",e); return false; }
+  }
+};
+
+function cloudSummary(){
+  let coreGot=0,coreTot=0; const sec={}; const detail=[]; const missed=[];
+  const marking={autoOK:0,autoTot:0,selfOK:0,selfTot:0,overrideUp:0,overrideDown:0};
+  try{ Q.forEach(x=>{ const s=scored(x);
+    if(x.tier==="core"){ coreTot++; if(s)coreGot++; }
+    sec[x.sec]=sec[x.sec]||{g:0,t:0}; sec[x.sec].t++; if(s)sec[x.sec].g++;
+    const ans=(STATE.inputs&&STATE.inputs[x.id])||"";
+    const model=Array.isArray(x.ans)?x.ans.join(" or "):(x.ans||x.model||"");
+    const checked=(STATE.revealed||[]).includes(x.sec);
+    const au=(STATE.auto&&STATE.auto[x.id]===true)?1:0;        // the lesson's own verdict
+    const mk=(STATE.marks&&STATE.marks[x.id]!==undefined)?STATE.marks[x.id]:null; // pupil's tick (self only)
+    detail.push({id:x.id,s:x.sec,k:x.kind,t:x.tier,a:ans,m:model,ok:s?1:0,au:au,mk:mk});
+    // self-mark honesty: compare pupil tick vs auto verdict on checked self-marked items
+    if(x.kind==="self"&&checked){ marking.autoTot++; marking.selfTot++;
+      if(au)marking.autoOK++; if(mk===1)marking.selfOK++;
+      if(mk===1&&!au)marking.overrideUp++;   // ticked right when it was wrong
+      if(mk===0&&au)marking.overrideDown++;  // crossed when it was actually right
+    }
+    if(x.tier==="core"&&!s&&checked)missed.push(model);
+  }); }catch(e){}
+  let txt=""; try{ txt=summary(); }catch(e){}
+  return { name:(STATE.name||""), lesson:LESSON.id, title:LESSON.title,
+           coreGot:coreGot, coreTot:coreTot, rag:(STATE.rag||""), recall:(STATE.rdone||""),
+           reflect:(STATE.reflect||""), dirt:(STATE.dirt||""), sections:sec,
+           detail:detail, missed:missed, marking:marking, text:txt,
+           savedAt:new Date().toISOString(), state:STATE };
+}
+
+let _mirrorTimer=null;
+function mirrorToCloud(){
+  if(!IDENTITY) return;
+  setSync("saving"); clearTimeout(_mirrorTimer);
+  _mirrorTimer=setTimeout(async()=>{
+    if(!CLOUD.endpoint){ setSync("device"); return; }
+    const ok=await CloudStore.push(cloudSummary());
+    setSync(ok?"cloud":"offline");
+  },600);
+}
+function setSync(state){
+  const el=document.getElementById('savestatus'); if(!el) return;
+  const map={ saving:["saving…","#ffffff"], cloud:["✓ saved to class store","#bff0c8"],
+    device:["✓ saved on this device","#bff0c8"], offline:["saved here — will sync when online","#ffe1b0"] };
+  const m=map[state]||map.device; el.textContent=m[0]; el.style.color=m[1];
+}
+
+/* ---------- sign-in gate ---------- */
+function showGate(){
+  const ov=document.createElement('div'); ov.id='y8-gate';
+  ov.style.cssText="position:fixed;inset:0;z-index:9999;background:rgba(15,25,45,.94);display:flex;align-items:center;justify-content:center;padding:20px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;";
+  ov.innerHTML=
+    '<div style="max-width:430px;width:100%;background:#fff;border-top:8px solid #C9A227;border-radius:14px;padding:26px 26px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);">'
+    +'<div style="font-size:13px;letter-spacing:1px;color:#2E75B6;font-weight:700;">YEAR 8 LATIN · 8JWW · DIRT</div>'
+    +'<div style="font-size:22px;color:#1F3864;font-weight:800;margin:2px 0 4px;">The Case Detective</div>'
+    +'<div style="font-size:13px;color:#667;margin-bottom:16px;">Sign in so your work saves and follows you to any computer.</div>'
+    +'<label style="font-size:13px;color:#1F3864;font-weight:700;">Class code</label>'
+    +'<input id="g-cls" autocomplete="off" placeholder="e.g. 8JWW" style="width:100%;box-sizing:border-box;margin:5px 0 12px;padding:11px;border-radius:8px;border:1px solid #c5d0e0;font-size:15px;">'
+    +'<label style="font-size:13px;color:#1F3864;font-weight:700;">Your name</label>'
+    +'<input id="g-cand" autocomplete="off" placeholder="e.g. Marcus" style="width:100%;box-sizing:border-box;margin:5px 0 4px;padding:11px;border-radius:8px;border:1px solid #c5d0e0;font-size:15px;">'
+    +'<div id="g-err" style="color:#c00;font-size:12.5px;min-height:17px;margin:3px 0 6px;"></div>'
+    +'<button id="g-go" style="width:100%;padding:12px;border:0;border-radius:8px;background:#1F3864;color:#fff;font-weight:700;font-size:15px;cursor:pointer;">Start my work</button>'
+    +'<div style="font-size:11.5px;color:#7e93a3;margin-top:13px;line-height:1.5;">Enter your <b>name</b> (or exam candidate number). Your class code comes from Mr Beasley.</div>'
+    +'</div>';
+  document.body.appendChild(ov);
+  document.getElementById('g-go').addEventListener('click',signIn);
+  ov.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); signIn(); } });
+  document.getElementById('g-cls').focus();
+}
+
+async function signIn(){
+  const cls=(document.getElementById('g-cls').value||'').trim().toUpperCase();
+  const cand=(document.getElementById('g-cand').value||'').trim();
+  const err=document.getElementById('g-err');
+  if(!cls){ err.textContent="Enter your class code."; return; }
+  if(!/^.{2,40}$/.test(cand)){ err.textContent="Please enter your name (2-40 characters)."; return; }
+  IDENTITY={cls:cls,cand:cand};
+  KEY=KEY_BASE+"_"+cls+"_"+cand;
+  const go=document.getElementById('g-go'); if(go) go.textContent="Loading…";
+  const remote=await CloudStore.pull();
+  if(remote&&remote.state){ try{ localStorage.setItem(KEY,JSON.stringify(remote.state)); }catch(e){} }
+  STATE=load();
+  const g=document.getElementById('y8-gate'); if(g) g.remove();
+  injectIdentityBar();
+  render();
+  setSync(CLOUD.endpoint?(remote?"cloud":"offline"):"device");
+}
+function signOut(){ IDENTITY=null; location.reload(); }
+
+function injectIdentityBar(){
+  const note=document.querySelector('.namebar .inner .save');
+  if(note){ note.innerHTML='Signed in: <b>'+IDENTITY.cls+' · '+IDENTITY.cand+'</b> &nbsp;'
+    +'<a href="#" onclick="signOut();return false;" style="color:#cfe0f5;">switch user</a>'; }
+}
+
+function bootIntervention(){ showGate(); }
+
+bootIntervention();
+</script>
+</body>
+</html>
